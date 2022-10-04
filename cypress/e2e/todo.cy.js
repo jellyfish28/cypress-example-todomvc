@@ -3,7 +3,6 @@
 /// <reference types="cypress" />
 
 
-
 // type definitions for custom commands like "createDefaultTodos"
 /// <reference types="../support" />
 
@@ -150,6 +149,7 @@ describe('TodoMVC - React', function () {
     it('should cancel edits on escape', function () {
 
         let ar = ['3', ' ', 'items', ' ', 'left']
+
         cy.createDefaultTodos()
         cy.get('.todo-count').children().each((el, index) => {
             expect(el.text()).to.include(ar[index])
@@ -275,7 +275,5 @@ describe('TodoMVC - React', function () {
 
     })
 })
-
-
 
 
